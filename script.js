@@ -11,6 +11,7 @@ function submitRequest(event) {
     const searchEngine = select.value;
 
     let params;
+    let domain = "com";
 
     if(searchEngine === "google" || searchEngine === "bing") {
         params = "search?q=";
@@ -20,9 +21,10 @@ function submitRequest(event) {
         params = "?q=";
     } else if(searchEngine === "yandex" || searchEngine === "mail") {
         params = "search/?text=";
+        domain = "ru";
     }
 
-    window.location.href = `https://www.${searchEngine}.com/${params}` + value;
+    window.location.href = `https://www.${searchEngine}.${domain}/${params}` + value;
 }
 
 document.addEventListener("DOMContentLoaded", function() {
