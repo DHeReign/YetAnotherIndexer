@@ -18,7 +18,7 @@ function submitRequest(event) {
         params = "search?p=";
     } else if(searchEngine === "duckduckgo") {
         params = "?q=";
-    } else if(searchEngine === "yandex") {
+    } else if(searchEngine === "yandex" || searchEngine === "mailru") {
         params = "search/?text=";
     }
 
