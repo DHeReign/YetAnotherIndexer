@@ -22,3 +22,16 @@ function submitRequest(event) {
 
     window.location.href = `https://www.${searchEngine}.com/${params}` + value;
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const select = document.querySelector(".search__select");
+    const savedEngine = localStorage.getItem("searchEngine");
+    
+    if (savedEngine) {
+        select.value = savedEngine;
+    }
+
+    select.addEventListener("change", function () {
+        localStorage.setItem("searchEngine", select.value);
+    });
+});
