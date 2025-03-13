@@ -2,7 +2,7 @@ const input = document.querySelector(".search__input");
 const button = document.querySelector(".search__button");
 const select = document.querySelector(".search__select");
 
-addEventListener("click", submitRequest);
+button.addEventListener("click", submitRequest);
 
 function submitRequest(event) {
     event.preventDefault();
