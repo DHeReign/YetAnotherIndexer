@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (savedEngine) {
         select.value = savedEngine;
     }
+    
 
     select.addEventListener("change", function () {
         localStorage.setItem("searchEngine", select.value);
