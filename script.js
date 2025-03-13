@@ -18,6 +18,8 @@ function submitRequest(event) {
         params = "search?p=";
     } else if(searchEngine === "duckduckgo") {
         params = "?q=";
+    } else if(searchEngine === "yandex") {
+        params = "search/?text";
     }
 
     window.location.href = `https://www.${searchEngine}.com/${params}` + value;
